@@ -17,7 +17,6 @@ import { useCheckout } from "../check-in-out/useCheckout";
 import Modal from "../../ui/Modal";
 import ConfirmDelete from "../../ui/ConfirmDelete";
 import { useDeleteBooking } from "./useDeleteBooking";
-import { deleteBooking } from "../../services/apiBookings";
 
 const HeadingGroup = styled.div`
   display: flex;
@@ -63,7 +62,7 @@ function BookingDetail() {
 
         {status === "checked-in" && (
           <Button
-            icon={<HiArrowUpOnSquare />}
+            $icon={<HiArrowUpOnSquare />}
             onClick={() => checkout(bookingId)}
             disabled={isCheckingOut}
           >
